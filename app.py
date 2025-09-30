@@ -49,5 +49,5 @@ while True:  # Loop principal para reiniciar a calculadora
         print("Obrigado por usar a caulculadora do Fernando! ")
         break
     elif saida == "N":
-        pass  # reinicia o programa automaticamente
+        pass  # reinicia o programa automaticamente // volta pro laço
 
