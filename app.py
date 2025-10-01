@@ -35,11 +35,14 @@ while True:  # Loop principal para reiniciar a calculadora
     elif opr == "*":
         resultado = num1 * num2
     elif opr == "/":
-        if num2 != 0: #encadeamento de condição: uma uma condição dentro de outra. 
-            resultado = num1 / num2
-        else:
-            print(" Não é possivel dividir por 0")  
-            exit()
+       while num2 == 0:
+           print(f"Não é possivel dividir por {num2}, Digite outro numero. ")
+           try:
+               num2 = float(input("Digite outro numero: "))
+           except:
+               print("Digite um numero válido. ")
+               continue 
+    resultado = num1 / num2     
 
     # resultado        
     print(f"Resultado: {resultado}") # f de format (para mostrar o que tem dentro da variavel)
